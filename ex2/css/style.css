@@ -114,8 +114,8 @@ p span {
 .paragraph h2 {
 
     font-family: 'Rubik';
-    font-style: normal;
-    font-weight: 500;
+    font-style: bold;
+    font-weight: 800;
     font-size: 30px;
     line-height: 40px;
 
@@ -531,6 +531,7 @@ p span {
 .program div {
 
     margin-top: 24px;
+    margin-left: 24px;
 
     font-family: 'Rubik';
     font-style: normal;

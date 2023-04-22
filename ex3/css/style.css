@@ -28,6 +28,12 @@ header {
     justify-content: center;
 }
 
+.head3 {
+    justify-content: right;
+    margin-right: 21px;
+
+}
+
 nav ul {
     left: 45%;
     list-style: none;
@@ -379,6 +385,14 @@ footer {
         flex-direction: column;
     }
 
+    #header-square {
+        width: 80px;
+        height: 80px;
+        background: #000000;
+        margin-top: 21px;
+
+    }
+
     .nav3 ul {
         background: #E5E5E5;
         height: 105px;
@@ -412,6 +426,16 @@ footer {
 
     }
 
+    #header-square {
+        width: 80px;
+        height: 80px;
+        background: #000000;
+        margin-top: 21px;
+        margin-right: 21px;
+
+
+    }
+
     .nav3 {
         background: #E5E5E5;
         width: 25.83%;
@@ -429,9 +453,14 @@ footer {
 
     .white {
         display: flex;
+        flex-wrap: wrap;
         background: #fff;
-        height: 100%;
+        justify-content: center;
+        margin-left: 64px;
         width: 66.95%;
+        font-family: 'amiko', sans-serif;
+
+
 
     }
 

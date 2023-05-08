@@ -95,82 +95,13 @@ function shineHeader() {
 
 shineHeader();
 /**NASA */
-let select = s => document.querySelector(s),
-    selectAll = s => document.querySelectorAll(s),
-    mainSVG = select('#mainSVG')
+const logo = document.querySelector(".nasaInsignia"),
+    elSize = document.querySelector("#size"),
+    el3d = document.querySelector("#perspective");
 
-gsap.set('svg', {
-    visibility: 'visible'
-})
+elSize.oninput = () => logo.style.fontSize = `${elSize.value}px`;
+el3d.onchange = () => logo.classList.toggle("nasaInsignia-3d", el3d.checked);
 
-CustomEase.create("logo1", "M0,0 C0.285,0.028 0.099,0.924 1,1")
+elSize.oninput();
+el3d.onchange();
 
-let tl1 = gsap.timeline({
-    defaults: {
-        ease: 'logo1',
-        duration: 1.5 * 2
-    }
-});
-tl1.add("N")
-    .from('.maskA1', {
-        drawSVG: '0% 0%'
-    }, "N")
-    .from('.maskS', {
-        drawSVG: '0% 0%'
-    }, "N")
-    .from('.maskN', {
-        drawSVG: '0% 0%'
-    }, "N")
-    .from('.maskA2', {
-        drawSVG: '100% 100%'
-    }, "N")
-
-let tl2 = gsap.timeline({
-    defaults: {
-        ease: 'logo1',
-        duration: 1.25 * 2
-    }
-});
-tl2.add("N")
-    .from('.maskA1_2', {
-        drawSVG: '0% 0%'
-    }, "N")
-    .from('.maskS_2', {
-        drawSVG: '0% 0%'
-    }, "N")
-    .from('.maskN_2', {
-        drawSVG: '0% 0%'
-    }, "N")
-    .from('.maskA2_2', {
-        drawSVG: '100% 100%'
-    }, "N")
-
-let tl3 = gsap.timeline({
-    defaults: {
-        ease: 'logo1',
-        duration: 1 * 2
-    }
-});
-tl3.add("N")
-    .from('.maskA1_3', {
-        drawSVG: '0% 0%'
-    }, "N")
-    .from('.maskS_3', {
-        drawSVG: '0% 0%'
-    }, "N")
-    .from('.maskN_3', {
-        drawSVG: '0% 0%'
-    }, "N")
-    .from('.maskA2_3', {
-        drawSVG: '100% 100%'
-    }, "N")
-
-const mainTl = gsap.timeline({
-    repeat: -1
-});
-mainTl.add(tl1)
-    .add(tl2, 0.58)
-    .add(tl3, 1.2)
-    .to('.whole', {
-        opacity: 0
-    }, '+=2')

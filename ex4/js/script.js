@@ -96,6 +96,37 @@ function shineHeader() {
 
 shineHeader();
 
+const form = document.getElementById('from');
+const range = document.getElementById('temper');
+const output = document.getElementById('theage');
+
+output.innerHTML = range.value;
+
+range.addEventListener('input', function () {
+    output.innerHTML = this.value;
+});
+
+function shineHeader() {
+    const header = document.getElementById('shining-header');
+    header.classList.add('shine');
+    setTimeout(() => {
+        header.classList.remove('shine');
+    }, 1000);
+}
+
+shineHeader();
+/**NASA */
+const logo = document.querySelector(".nasaInsignia"),
+    elSize = document.querySelector("#size"),
+    el3d = document.querySelector("#perspective");
+
+elSize.oninput = () => logo.style.fontSize = `${elSize.value}px`;
+el3d.onchange = () => logo.classList.toggle("nasaInsignia-3d", el3d.checked);
+
+elSize.oninput();
+el3d.onchange();
+
+
 
 
 

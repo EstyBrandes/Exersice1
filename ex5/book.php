@@ -77,12 +77,14 @@ if (isset($_GET['id'])) {
             $author = $row['author'];
             $photo = $row['photo'];
             $secphoto = $row['secphoto'];
+	    $category = $row['category']; 
 
             // Display the book details
             echo '<div class="book-details">';
             echo '<div class="book-info">';
             echo '<h1>' . $name . '</h1>';
             echo '<p class="author">Author: ' . $author . '</p>';
+	    echo '<p>Category: ' . $category . '</p>';
             echo '<p>Description: ' . $description . '</p>';
             echo '<p>Price: ' . $price .' $'. '</p>';
             echo '</div>';
